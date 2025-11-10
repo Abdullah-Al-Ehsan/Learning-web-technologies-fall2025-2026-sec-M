@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+  <style>
+    
+    fieldset {
+      width: 200px;
+      margin-left: 50px;
+    }
+
+    legend {
+      font-weight: bold;
+    }
+
+      .inputs {
+      display: flex;
+    }
+
+    .inputs input {
+      width: 40px;
+      text-align: center;
+      margin: 0px 5px 0px 5px;
+    }
+
+    .labels {
+        display:flex;
+        margin-left: 5px; 
+    }
+
+    .labels label {
+         margin: 15px;
+    }
+
+      .hr {
+        border: 1px solid gray;      
+    }
+
+  </style>
+</head>
+
+
+<body>
+    <P><b>4.</b></P>
+  <form>
+    <fieldset>
+      <legend>Date of Birth</legend>
+
+      <div class="labels">
+        <label>dd</label>
+        <label>mm</label>
+        <label>yyyy</label>
+      </div>
+
+      <div class="inputs">
+        <input type="text" id="day" name="day">
+        <span>/</span>
+        <input type="text" id="month" name="month">
+        <span>/</span>
+        <input type="text" id="year" name="year">
+      </div>
+
+      <hr class="hr">
+
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form>
+</body>
+</html>
