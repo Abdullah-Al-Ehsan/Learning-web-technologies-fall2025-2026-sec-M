@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+
+<body>
+    <form>
+        <label for="Name">Name</label>
+        <br><br>
+        <input type="text" id="name">
+        <br><br>
+         <p id="message"></p>
+        <input type="button" name="click" value="click" onclick="Submit()">
+
+        <script>
+             function test(txt)
+             {
+                  
+             }
+             function Submit()
+             {
+                  let txt=document.getElementById('name').value;
+                  let message=document.getElementById('message');
+                  if(txt=="")
+                  {
+                      message.innerHTML="Name can not be empty";
+                      return;
+                  }
+                  if(txt.length<2)
+                  {
+                      message.innerHTML="Name should contain at least two words";
+                      return;
+                  }
+                   if(!((txt[0]>='A') && (txt[0]<='Z')) || !((txt[0]>='a') && (txt[0]<='z')))
+                    {
+                       message.innerHTML="Name must start with a letter";
+                       return;
+                    }
+                  
+                  for(let i=0; i<txt.length; i++)
+                  {
+                      let ch=txt[i];
+                      if(!(ch>'A' || ch<'Z') || !(ch>'a' || ch<'z'))
+                      { 
+                           message.innerHTML="Enter a valid Name";
+                           return;
+                      }
+                      
+                  }
+             }
+        </script>
+    </form>
+</body>
+</html>
