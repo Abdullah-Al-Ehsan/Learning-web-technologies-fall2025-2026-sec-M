@@ -2,8 +2,17 @@
 
 <head>
     <style>
-        .hr{
-            width: 200px;
+        fieldset{
+            width:300px
+        }
+        #userid{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        #check{
+            font-size: 14px;
+        }
+        #line{
             border: 1px solid gray;
         }
     </style>
@@ -11,16 +20,18 @@
 </head>
 
 <body>
-   <p><b>7.</b></p>
+   <form>
    <fieldset>
        <legend>Profile Picture</legend>
-       <label for="uderid">User Id</label>
-       <input type="number" id="userid" name="userid">
+       <label for="userid" id="userid">User Id</label>
+       <input type="text" id="userid" name="userid"><br>
        <label for="picture">Picture</label>
-       <button for="browse">Browse...</button>
-       <label for="check">No file selected</label>
-       <hr class="hr">
+       <button for="browse"> Browse...</button>
+       <label for="check" id="check">No file selected</label>
+       <br>
+       <hr id="line">
        <button for="submit">Submit</button>
    </fieldset>
+   </form>
 </body>
 </html>
