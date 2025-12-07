@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+    let userAge = "25";
+    let bonusPoints = "10";
+    let scores = [80, 85, 90, 95, 100];
+
+    // String + number → string concatenation
+    console.log("Total: " + userAge + bonusPoints);
+
+    // Division converts string "25" automatically to number 25
+    document.write("Avg: " + userAge / 5 + "<br>");
+
+    // Subtraction converts strings to numbers
+    let position = userAge - bonusPoints; // 25 - 10 = 15
+    console.log("Score[" + position + "]: " + scores[position]); // out of range = undefined
+
+    // Ternary operator
+    let isEligible = scores.length > 3;
+    let bonus = isEligible ? bonusPoints : 0;
+    document.write("Eligible: " + isEligible + "<br>");
+
+    // parseInt converts string to integer
+    let convertedAge = parseInt(userAge);
+    console.log("Match: " + (userAge === convertedAge)); // false (string !== number)
+
+    // pop removes last element
+    let removedScore = scores.pop();
+    document.write("Type: " + typeof removedScore + "<br>");
+
+    console.log("Count: " + scores.length);
+
+    let scoreString = "98.7";
+    let decimal = parseFloat(scoreString);
+    document.write("Sub: " + scoreString.substring(0, 2) + "<br>");
+
+    let undefinedVar;
+    let nullVar = null;
+
+    console.log("Undef: " + typeof undefinedVar);
+
+    // If scores[10] is undefined → "missing"
+    let outOfBounds = scores[10] || "missing";
+    document.write("OOB: " + scores[10] + "<br>");
+</script>
+
+</body>
+</html>
