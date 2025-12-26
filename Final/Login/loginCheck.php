@@ -7,10 +7,7 @@
            $email = $_POST['email'];
            $password = $_POST['password'];
 
-           if(!isset($_SESSION['emailS']) || !isset($_SESSION['passwordS'])){
-               header('location: Signup.php');
-           }
-           else{
+          
              $emailS = $_SESSION['emailS'];
              $passwordS = $_SESSION['passwordS'];
   
@@ -25,8 +22,10 @@
                      header('location: dashboard.php');
                 }
              }
-
-           }    
+ 
+    }
+    else if(isset($_POST['signup'])){
+        header('location: Signup.php');
     }
     else{
         header('location: login.php');
