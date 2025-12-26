@@ -11,7 +11,7 @@
       $username = $_POST['username'];
       $password = $_POST['password'];  
       if($username=="" || $password==""){
-          echo "Null subssion!";
+          echo "Null submission!";
       }
       else
       {
